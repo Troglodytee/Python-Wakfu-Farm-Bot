@@ -14,10 +14,10 @@ This is a program that can control you mouse to farm automatically ressources in
 3. Run `main.pyw`
 ## Requirements
 - Python 3.7
-- Python tkinter library
-- Python pyautogui library
-- Python keyboard library
-- Python math library
+- Python `tkinter` library
+- Python `pyautogui` library
+- Python `keyboard` library
+- Python `math` library
 ## Usage
 First of all you have to add tiles types by clicking on `Ajouter un type`.
 
