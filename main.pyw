@@ -113,18 +113,18 @@ class Bot:
                             y -= 100
                         name = ["arrow_diag_right.png", "arrow_down.png", "arrow_diag_left"][self.__n_buttons[1]-1]
                     moveTo(x, y)
-                    if locateOnScreen(PATH+name) == None:
-                        if self.__wait_ressources: self.__master.get_window().after(5000, self.__click_on_tile)
-                        else:
-                            self.__index += 3
-                            if self.__index == len(self.__path): self.__index = 0
-                            click(center_tile_pos[0], center_tile_pos[1], button="left")
-                            self.__master.get_window().after(1, self.__click_on_tile)
-                    else:
-                        click(x, y, button="left")
-                        self.__index += 3
-                        if self.__index == len(self.__path): self.__index = 0
-                        self.__master.get_window().after(int(self.__recuperation_time*1000)+500, self.__click_on_tile)
+                    # if locateOnScreen(PATH+name) == None:
+                    #     if self.__wait_ressources: self.__master.get_window().after(5000, self.__click_on_tile)
+                    #     else:
+                    #         self.__index += 3
+                    #         if self.__index == len(self.__path): self.__index = 0
+                    #         click(center_tile_pos[0], center_tile_pos[1], button="left")
+                    #         self.__master.get_window().after(1, self.__click_on_tile)
+                    # else:
+                    click(x, y, button="left")
+                    self.__index += 3
+                    if self.__index == len(self.__path): self.__index = 0
+                    self.__master.get_window().after(int(self.__recuperation_time*1000)+500, self.__click_on_tile)
                 else:
                     j, x, y, n = self.__index, size_window_pos[0]+1, size_window_pos[1]+1, 0
                     while size_window_pos[0] < x < size_window_pos[2] and size_window_pos[1] < y < size_window_pos[3]:
